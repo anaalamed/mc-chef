@@ -1,0 +1,50 @@
+{
+    "TOPBAR": {
+        "about": "About",
+        "menu": "Menu",
+        "gallery": "Gallery",
+        "contact": "Contact"
+    },
+    "ABOUT_ME": "About Me",
+    "DESCRIPTION": "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "MENU": {
+        "title": "Menu",
+        "snacks": {
+            "title": "Snacks",
+            "items": [
+                {
+                    "title": "snack 1",
+                    "description": "description 1 vdfvdfvdfvdfdf fdvdvfdvdf fdcscvvscdssd vfvdfcdfcdcd dcdvdvdfvfg fffdvdf dvdvdfvcdfdf vdvdcdfcddf vfdvcdfvdfdfdf vdfvdfvdvdf vdvdfdfc cfcdfvdfcddf  vddvdvdvfd vvdvd"
+                },
+                {
+                    "title": "snack 2",
+                    "description": "description 2"
+                }
+            ]
+        },
+        "soups": {
+            "title": "Soups",
+            "items": [
+                {
+                    "title": "soup 1",
+                    "description": "description 1"
+                },
+                {
+                    "title": "soup 2",
+                    "description": "description 2"
+                }
+            ]
+        }
+    },
+    "CONTACT": {
+        "title": "Contact Me",
+        "text": "Please leave your details and i'll contact you soon",
+        "name": "Name",
+        "mail": "Mail",
+        "phone": "Telephone",
+        "description": "Description"
+    },
+    "GALLERY": {
+        "title": "Gallery"
+    }
+}

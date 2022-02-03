@@ -1,0 +1,50 @@
+{
+    "TOPBAR": {
+        "about": "אודות",
+        "menu": "תפריט",
+        "gallery": "גלריה",
+        "contact": "צור קשר"
+    },
+    "ABOUT_ME": "קצת עליי",
+    "DESCRIPTION": "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים גם דמי טקסט או ג'יבריש - ומיועד להיות ממוקם בסקיצות עיצוביות - של עלונים, מגזינים, מודעות, אתרי אינטרנט וכו' - במקום הטקסט האמיתי הסופי - עד שיהיה טקסט אמיתי.",
+    "MENU": {
+        "title": "תפריט",
+        "snacks": {
+            "title": "ראשונות",
+            "items": [
+                {
+                    "title": "ראשונה 1",
+                    "description": "description 1 vdfvdfvdfvdfdf fdvdvfdvdf fdcscvvscdssd vfvdfcdfcdcd dcdvdvdfvfg fffdvdf dvdvdfvcdfdf vdvdcdfcddf vfdvcdfvdfdfdf vdfvdfvdvdf vdvdfdfc cfcdfvdfcddf  vddvdvdvfd vvdvd"
+                },
+                {
+                    "title": "ראשונה 2",
+                    "description": "description 2"
+                }
+            ]
+        },
+        "soups": {
+            "title": "מרקים",
+            "items": [
+                {
+                    "title": "מרק",
+                    "description": "בגכבגבג"
+                },
+                {
+                    "title": "מרק",
+                    "description": "בבגבכבג"
+                }
+            ]
+        }
+    },
+    "CONTACT": {
+        "title": "צור קשר",
+        "text": "תשאירו פרטים ואחזור אליכם בהקדם",
+        "name": "שם",
+        "mail": "מייל",
+        "phone": "מספר טלפון",
+        "description": "תוכן הפנייה "
+    },
+    "GALLERY": {
+        "title": "Gallery"
+    }
+}
