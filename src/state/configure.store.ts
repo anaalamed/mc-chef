@@ -8,8 +8,8 @@ import {
 
 const store = configureStore({
   reducer: rootReducer,
-  preloadedState: get_local_state(),
-  middleware: [...getDefaultMiddleware(), logger, save_state_locally],
+  // preloadedState: get_local_state(),
+  // middleware: [...getDefaultMiddleware(), logger, save_state_locally],
   devTools: process.env.NODE_ENV !== "production"
 });
 

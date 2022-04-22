@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import * as joker_api from "../../api/joker.api";
 
 const app_slice = createSlice({
   name: "app",

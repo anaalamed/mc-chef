@@ -1,242 +1,161 @@
 import React from "react";
 import styled from "styled-components";
-import { useForm, Controller } from "react-hook-form";
-import { Main, Title } from '../../styles/reset.css';
+import { Container, Main, Title } from '../../styles/reset.css';
 import { devices } from '../../styles/responsive';
 import { useTranslation } from 'react-i18next';
 import { COLORS } from "../../styles/colors";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faUser, faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import rtl from "styled-components-rtl";
+import ContactForm from '../ContactForm';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 
 const About = () => {
-    const { t } = useTranslation();
-    const contact = t("CONTACT", { returnObjects: true });
+  const { t } = useTranslation();
+  const contact = t("CONTACT", { returnObjects: true });
 
-    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const phoneRegex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/;
-    const { control, handleSubmit, formState: { errors } } = useForm();
 
-    const onSubmit = (data) => {
+  return (
+    <Main>
+      <Title>{contact.title}</Title>
 
-    }
+      <Box>
+        {/* <ImgWrapper>
+          <Img src="assets/images/aa.jpeg"></Img>
+        </ImgWrapper> */}
 
-    return (
-        <Main>
-            <Title>{contact.title}</Title>
-            <Text>{contact.text}</Text>
-            <Form >
-                <Controller
-                    name="name"
-                    defaultValue=""
-                    control={control}
-                    rules={{
-                        required: true,
-                        minLength: 2,
-                    }}
-                    render={({ field: { onChange, value } }) => (
-                        <InputContainer>
-                            <InputIcon icon={faUser} />
-                            <Input
-                                onChange={onChange}
-                                value={value}
-                                placeholder={contact.name}
-                            />
-                        </InputContainer>
-                    )}
-                />
-                {errors.name && <StyledText>This is not valid.</StyledText>}
+        <DetailsBox>
+          <TitleText>{contact.meTitle}</TitleText>
+          <Icons>
+            <a href="https://www.facebook.com/anaalamed1/" target="_blank"><Icon icon={faFacebook} /></a>
+            <a href="https://www.facebook.com/anaalamed1/" target="_blank"><Icon icon={faInstagram} /></a>
+          </Icons>
+          <a href="mailto:anaalamed@gmail.com" target="_blank" ><Icon icon={faEnvelope} /><Text>anaalamed@gmail.com</Text></a>
+          <a href="tel:0542308919" target="_blank" ><Icon icon={faPhone} /><Text>054-2308919</Text></a>
 
-                <Controller
-                    name="email"
-                    defaultValue=""
-                    control={control}
-                    rules={{
-                        required: true,
-                        minLength: 8,
-                        pattern: emailRegex
-                    }}
-                    render={({ field: { onChange, value } }) => (
-                        <InputContainer>
-                            <InputIcon icon={faEnvelope} />
-                            <Input
-                                onChange={onChange}
-                                value={value}
-                                placeholder={contact.mail}
-                            />
-                        </InputContainer>
-                    )}
-                />
-                {errors.email && <StyledText>This is not valid.</StyledText>}
+        </DetailsBox>
 
-                <Controller
-                    name="telephone"
-                    defaultValue=""
-                    control={control}
-                    rules={{
-                        required: true,
-                        minLength: 8,
-                        pattern: phoneRegex
-                    }}
-                    render={({ field: { onChange, value } }) => (
-                        <InputContainer>
-                            <InputIcon icon={faPhone} />
-                            <Input
-                                onChange={onChange}
-                                value={value}
-                                placeholder={contact.phone}
-                            />
-                        </InputContainer>
-                    )}
-                />
-                {errors.phone && <StyledText>This is not valid.</StyledText>}
-
-                <Controller
-                    name="text"
-                    defaultValue=""
-                    control={control}
-                    rules={{
-                        required: true,
-                        minLength: 8,
-                    }}
-                    render={({ field: { onChange, value } }) => (
-                        <InputContainer>
-                            <InputIcon icon={faMicrophone} />
-                            <TextArea
-                                onChange={onChange}
-                                value={value}
-                                placeholder={contact.description}
-                            />
-                        </InputContainer>
-                    )}
-                />
-
-                <Button title="Submit" onClick={handleSubmit(onSubmit)} >Send</Button>
-            </Form>
-
-        </Main>
-    );
+        <ContactForm></ContactForm>
+      </Box>
+    </Main>
+  );
 };
 export default About;
 
 
-const Form = styled.form`
-  /* width: 90%; */
+
+const Box = styled(Container)`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-`;
-
-const Text = styled.p`
-  /* line-height: 1.15; */
-  font-size: 2rem;
-  text-align: center;
-  padding: 2.2rem 4.4rem;
-`;
-
-
-
-export const InputContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 30%;
-
-  /* @media ${devices.laptop} {
-    width: 35%;
-  } */
-`;
-
-export const Input = styled.input`
-  background: #d5f6c6;
-  border: 3px solid ${COLORS.main} ;
-  color: navy;
-  /* padding: 15px; */
-  padding: 15px 50px;
-  width: 100%;
-  margin: 10px;
-  border-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 50px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 10px;
-  box-shadow: 10px 5px 5px grey;
-  
-  :hover {
-      background: ${COLORS.hover};
-  }
-
-  ::placeholder {
-    color: ${COLORS.main};
-  }
-`;
-
-export const TextArea = styled.textarea`
-  background: #d5f6c6;
-  border: 3px solid ${COLORS.main} ;
-  color: navy;
-  padding: 15px 50px;
-  width: 100%;
-  height: 200px;
-  margin: 10px;
-  border-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 50px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 10px;
-  box-shadow: 10px 5px 5px grey;
-  
-  :hover {
-      background: ${COLORS.hover};
-  }
-
-  ::placeholder {
-    color: ${COLORS.main};
-  }
-`;
-
-export const InputIcon = styled(FontAwesomeIcon)`
-  position: relative;
-  z-index: 100;
-  top: 25px;
-  font-size: 20px;
-  left: 50px;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  width: 70%;
   color: ${COLORS.main};
 
-    ${rtl`
-        right: 50px;
-    `}
+  @media ${devices.mobile} {
+    flex-direction: column;
+  }
+
 `;
 
-export const Button = styled.button`
-  background: ${COLORS.main};
-  padding: 15px;
-  border-radius: 10px;
-
-  margin-top: 10px;
-  border: 1px solid ${COLORS.hover};
-  margin: 20px;
-  color: ${COLORS.grey};
-  font-weight: bold;
-  font-size: 20px;
-  cursor: pointer;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 50px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 10px;
+const DetailsBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  /* padding: 0 20rem 0 ; */
+  width: 50%;
+  color: ${COLORS.main};
+  /* background: red; */
+  border: 3px solid ${COLORS.main};
+  border-radius:  50px 10px 50px 10px;
+  height: 400px;
   box-shadow: 10px 5px 5px grey;
-  width: 20%;
 
-  :hover {
-      background: ${COLORS.hover};
+ 
+  @media ${devices.mobile} {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+
+    ::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #ccc;
+        margin: 3rem;
+    }
+  }
+
+`;
+
+const Icons = styled.div`
+  display: flex;
+  justify-content: center;
+  margin:  2rem 0;
+  width: 40%;
+  /* background: red; */
+
+
+  a {
+    color: ${COLORS.grey};
+    /* color: #bababa; */
+    text-decoration: none;
+
   }
 `;
 
-export const StyledText = styled.p`
-    font-weight: bold;
-    color: red;
-    text-align: center;
-    padding-bottom: 10px;
+const Icon = styled(FontAwesomeIcon)`
+  font-size: 40px;
+  padding:  0 1rem;
+  color: ${COLORS.hover};
+  /* color: ${COLORS.orange}; */
+:hover {
+  color: ${COLORS.grey}
+}
+`;
+
+const Text = styled.span`
+  height: 60px;
+  line-height: 60px;
+  color: ${COLORS.main};
+  text-decoration: none;
+`;
+
+const TitleText = styled.p`
+font-size: 2rem;
+text-align: center;
+padding: 2.2rem 4.4rem;
+`;
+
+const ImgWrapper = styled.div`
+  overflow: hidden;
+  border-radius: 3rem;
+  position: absolute;
+  bottom: 17rem;
+  /* max-width: 100px; */
+  /* max-height: 100px; */
+  width: 300px;
+  height: 200px;
+
+  right: 5rem;
+
+  /* ${rtl`
+    left: 5rem;
+  `} */
+
+`;
+
+const Img = styled.img`
+  border-radius: 0.6rem;
+  transform: scale(1);
+  transition: 1s;
+  /* max-height: 70vh; */
+  width: 300px;
+
+  :hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
 `;

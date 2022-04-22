@@ -5,44 +5,156 @@
         "gallery": "גלריה",
         "contact": "צור קשר"
     },
-    "ABOUT_ME": "קצת עליי",
-    "DESCRIPTION": "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים גם דמי טקסט או ג'יבריש - ומיועד להיות ממוקם בסקיצות עיצוביות - של עלונים, מגזינים, מודעות, אתרי אינטרנט וכו' - במקום הטקסט האמיתי הסופי - עד שיהיה טקסט אמיתי.",
+    "HOMEPAGE": {
+        "about": "קצת עליי"
+    },
+    "ABOUT": {
+        "title": "קצת עליי",
+        "description": "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים גם דמי טקסט או ג'יבריש - ומיועד להיות ממוקם בסקיצות עיצוביות - של עלונים, מגזינים, מודעות, אתרי אינטרנט וכו' - במקום הטקסט האמיתי הסופי - עד שיהיה טקסט אמיתי."
+    },
     "MENU": {
-        "title": "תפריט",
-        "snacks": {
-            "title": "ראשונות",
-            "items": [
-                {
-                    "title": "ראשונה 1",
-                    "description": "description 1 vdfvdfvdfvdfdf fdvdvfdvdf fdcscvvscdssd vfvdfcdfcdcd dcdvdvdfvfg fffdvdf dvdvdfvcdfdf vdvdcdfcddf vfdvcdfvdfdfdf vdfvdfvdvdf vdvdfdfc cfcdfvdfcddf  vddvdvdvfd vvdvd"
-                },
-                {
-                    "title": "ראשונה 2",
-                    "description": "description 2"
-                }
-            ]
-        },
-        "soups": {
-            "title": "מרקים",
-            "items": [
-                {
-                    "title": "מרק",
-                    "description": "בגכבגבג"
-                },
-                {
-                    "title": "מרק",
-                    "description": "בבגבכבג"
-                }
-            ]
-        }
+        "title": "Menu",
+        "categories": [
+            {
+                "id": "salats",
+                "title": "סלטים",
+                "description": "",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "antipasti",
+                "title": "אנטיפסטי",
+                "description": "",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "first",
+                "title": "Первые блюда/ холодные закуски",
+                "description": "",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "soups",
+                "title": "מרקים",
+                "description": "כמות מרק כ-2 ליטר",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "bakery",
+                "title": "בצקים",
+                "description": "",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "fish",
+                "title": "דגים",
+                "description": "",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "meat",
+                "title": "בשרים",
+                "description": "",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "garnirs",
+                "title": "תוספות",
+                "description": "",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "desserts",
+                "title": "קינוחים",
+                "description": "",
+                "items": [
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            }
+        ]
     },
     "CONTACT": {
         "title": "צור קשר",
-        "text": "תשאירו פרטים ואחזור אליכם בהקדם",
+        "formTitle": "תשאירו פרטים ואחזור אליכם בהקדם",
         "name": "שם",
         "mail": "מייל",
         "phone": "מספר טלפון",
-        "description": "תוכן הפנייה "
+        "description": "תוכן הפנייה ",
+        "meTitle": "אפשר למצוא אותי ב: ",
+        "newsletterTitle1": "הצטרפו לניוזלטר שלנו",
+        "newsletterTitle2": "ותהנו ממבצעים מיוחדים ועדכונים שווים"
     },
     "GALLERY": {
         "title": "Gallery"

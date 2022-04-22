@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import styled from "styled-components";
+import { COLORS } from '../styles/colors';
+import { devices } from '../styles/responsive';
+
+
 
 const LangSelector = () => {
     const { i18n } = useTranslation();
@@ -11,13 +16,39 @@ const LangSelector = () => {
     }
 
     return (
-        <div onChange={changeLanguage}>
-            <select >
-                <option value="ru">RU</option>
-                <option value="he">HE</option>
-            </select>
-        </div>
+        <Box>
+
+            <div className="custom-select" onChange={changeLanguage}>
+                <Select className="a" >
+                    <option value="ru">RU</option>
+                    <option value="he">HE</option>
+                </Select>
+            </div>
+        </Box>
     )
 }
 
 export default LangSelector;
+
+const Box = styled.div`
+  /* align-self: flex-end; */
+  /* justify-self: flex-start; */
+`;
+
+const Select = styled.select`
+  background: ${COLORS.main};
+  color: white;
+  height: 25px;
+  padding: 0 0.5rem;
+  margin: 0 2rem;
+
+  @media ${devices.mobile} {
+      margin: 0
+  }
+
+  
+  /* :hover {
+      background: ${COLORS.hover};
+    } */
+
+`;

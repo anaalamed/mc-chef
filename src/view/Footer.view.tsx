@@ -4,7 +4,7 @@ import { COLORS } from "../styles/colors";
 // import { Title } from "../styles/reset.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -14,11 +14,13 @@ const Footer = () => {
       <Title1>טעמי עולם MC </Title1>
       {/* <Title2>Contact me at: </Title2> */}
       <Icons>
+        <a href="https://wa.me/+972545474923" target="_blank" ><Icon icon={faWhatsapp} /></a>
         <a href="https://www.facebook.com/anaalamed1/" target="_blank"><Icon icon={faFacebook} /></a>
         <a href="https://www.facebook.com/anaalamed1/" target="_blank"><Icon icon={faInstagram} /></a>
         <a href="mailto:anaalamed@gmail.com" target="_blank" ><Icon icon={faEnvelope} /></a>
       </Icons>
 
+      <p style={{ textAlign: "center" }}>Copyright © 2022 MC TaameyOlam. All Rights Reserved</p>
     </Box>
   );
 };
@@ -37,6 +39,7 @@ const Box = styled.footer`
   background: #fff;
   position: relative;
   bottom: 0;
+  padding: 2rem 0 2rem;
 `;
 
 const Title1 = styled.h3`
@@ -46,21 +49,15 @@ const Title1 = styled.h3`
   margin: 1rem;
 `;
 
-const Title2 = styled.h3`
-  font-size: 2rem;
-  font-weight: 700;
-  color: ${COLORS.main};
-`;
-
 const Icons = styled.div`
   display: flex;
+  margin: 0 auto 1rem;
 
   a {
-    color: ${COLORS.grey};
-    /* color: #bababa; */
+    color: ${COLORS.hover};
 
     :hover {
-      color: ${COLORS.main}
+      color: ${COLORS.grey}
     }
   }
 `;

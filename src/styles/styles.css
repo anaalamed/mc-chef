@@ -1,0 +1,94 @@
+.imgHover {
+    transform: scale(1);
+    transition: 1s;
+    /* max-height: 300px; */
+}
+
+.imgHover:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+
+.react-photo-gallery--gallery img {
+    /* overflow: hidden;
+    transform: scale(1); */
+}
+.react-photo-gallery--gallery img:hover::after {
+    /* transform: scale(1.1); */
+    /* transition: 0.5s;
+    border: 1px solid green;
+    opacity: 0.6; */
+
+    content: "";
+    display: block;
+    background: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 99999;
+
+}
+
+.catDesserts {
+    width: 100% !important;
+    position: relative;
+}
+#root .catDesserts img {
+    position: relative;
+    top: -390px;
+}
+
+
+
+/* homepage slider  */
+.alice-carousel__stage-item img {
+    width: 100%;
+    height: 90vh;
+}
+
+@media screen and (max-width: 812px) {
+    .alice-carousel__stage-item img {
+        height: 40vh;
+    }
+    .alice-carousel .alice-carousel__next-btn,
+    .alice-carousel .alice-carousel__prev-btn {
+        top: 32vh; 
+    }
+}
+
+.alice-carousel__prev-btn {
+    position: absolute; 
+    bottom: 0;
+    top: 80vh; 
+    right: 50px; 
+    width: auto;
+}
+
+.alice-carousel__next-btn {
+    position: absolute; 
+    bottom: 0;
+    top: 80vh; 
+    right: 15px; 
+    width: auto;
+}
+
+.alice-carousel__prev-btn  span,
+.alice-carousel__next-btn  span {
+    font-size: 40px;
+}
+
+.alice-carousel__dots .alice-carousel__dots-item {
+    display: none;
+}
+
+
+
+
+#root .active {
+    background: #c1502e;
+}
+
+

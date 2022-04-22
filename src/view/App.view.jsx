@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
 import Home from "./pages/Home.page";
-import Joker from "./pages/Joker.page";
-import Footer from "./Footer.view";
 import TopBar from "./TopBar.view";
+import Footer from "./Footer.view";
+import Newsletter from "./Newsletter.view";
 import About from "./pages/About.page";
 import Menu from "./pages/Menu.page";
 import Contact from "./pages/Contact.page";
 import Gallery from "./pages/Gallery.page";
+
 
 import LangSelector from "./LangSelector";
 import { COLORS } from '../styles/colors';
@@ -19,6 +20,7 @@ const App = () => {
   const { t, i18n } = useTranslation();
   document.body.dir = i18n.dir();
   console.log(i18n.dir());
+  let a = "aaaa";
 
   return (
     <React.Fragment>
@@ -32,7 +34,8 @@ const App = () => {
         <Route path="/menu" exact component={Menu} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/gallery" exact component={Gallery} />
-
+        <Route path="/gallery/:category" component={Gallery} />
+        <Newsletter></Newsletter>
         <Footer />
       </Box>
     </React.Fragment>

@@ -8,14 +8,16 @@ import { useTranslation } from 'react-i18next';
 
 const About = () => {
   const { t } = useTranslation();
+  const about = t("ABOUT", { returnObjects: true });
+
 
   return (
     <Main>
       <Container>
 
-        <Title>{t("ABOUT_ME")}</Title>
+        <Title>{about.title}</Title>
         <Box>
-          <Description>{t("DESCRIPTION")}</Description>
+          <Description>{about.description}</Description>
           <ImgWrapper>
             <Img src="assets/images/chef.jpeg"></Img>
           </ImgWrapper>
@@ -28,11 +30,12 @@ export default About;
 
 const Box = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: 2rem 1rem;
 
   @media ${devices.mobile} {
-  flex-direction: column;
+    flex-direction: column;
   }
 `;
 
@@ -57,6 +60,6 @@ const Img = styled.img`
 const Description = styled.p`
   text-align: center;
   font-size: 1.6rem;
-  padding: 0 2rem;
-  width: 50%;
+  padding: 1rem 2rem;
+  max-width: 50rem;
 `;

@@ -5,46 +5,594 @@
         "gallery": "Gallery",
         "contact": "Contact"
     },
-    "ABOUT_ME": "About Me",
-    "DESCRIPTION": "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "HOMEPAGE": {
+        "about": "About Me",
+        "conditory": "Conditory",
+        "gurme": "Gurme",
+        "taamim": "Taamim"
+    },
+    "ABOUT": {
+        "title": "About Me",
+        "description": "MC - Мири Коэн, шеф-кондитор, выпускница  курса кондиторов Эстелла, закончившая с отличием курсы кулинарного искусства Дан - Гурме. Меню на заказ. \n\n Возможны различные  дополнительные  варианты по взаимной договоренности."
+    },
     "MENU": {
         "title": "Menu",
-        "snacks": {
-            "title": "Snacks",
-            "items": [
-                {
-                    "title": "snack 1",
-                    "description": "description 1 vdfvdfvdfvdfdf fdvdvfdvdf fdcscvvscdssd vfvdfcdfcdcd dcdvdvdfvfg fffdvdf dvdvdfvcdfdf vdvdcdfcddf vfdvcdfvdfdfdf vdfvdfvdvdf vdvdfdfc cfcdfvdfcddf  vddvdvdvfd vvdvd"
-                },
-                {
-                    "title": "snack 2",
-                    "description": "description 2"
-                }
-            ]
-        },
-        "soups": {
-            "title": "Soups",
-            "items": [
-                {
-                    "title": "soup 1",
-                    "description": "description 1"
-                },
-                {
-                    "title": "soup 2",
-                    "description": "description 2"
-                }
-            ]
-        }
+        "categories": [
+            {
+                "id": "salats",
+                "title": "Салаты",
+                "description": "стоимость на 2 кг готового продукта",
+                "items": [
+                    {
+                        "title": "русский салат Шуба",
+                        "description": "",
+                        "price": "80"
+                    },
+                    {
+                        "title": "русский салат Винегрет",
+                        "description": "",
+                        "price": "70"
+                    },
+                    {
+                        "title": "Румынский салат",
+                        "description": "печеные овощи ( баклажаны, перец, помидоры), соленый огурец, оливковое  масло и сок лимона",
+                        "price": "70"
+                    },
+                    {
+                        "title": "Итальянский салат:",
+                        "description": "печеные помидоры, черри, маринованные артишоки, руккола, красный лук",
+                        "price": "100"
+                    },
+                    {
+                        "title": "Французский салат",
+                        "description": "листовой салат хаса, андив, красный лук, груша, сыр Рокфор и соус  винегрет ",
+                        "price": "100"
+                    },
+                    {
+                        "title": "?",
+                        "description": "салат с черными бобами,  печеным бататом и сыром фета",
+                        "price": "80"
+                    },
+                    {
+                        "title": "Японский салат",
+                        "description": "прозрачная  лапша из стручковой фасоли, листья вакаме, зеленый лук, огурец, семена кунжута ",
+                        "price": "80"
+                    },
+                    {
+                        "title": "овощи",
+                        "description": "маринованные по- китайски",
+                        "price": "70"
+                    },
+                    {
+                        "title": "Антипасти",
+                        "description": "печеные овощи в соусе силан, бальзамическом уксусе и оливковом масле",
+                        "price": "70"
+                    },
+                    {
+                        "title": "?",
+                        "description": "салат манго с красной рыбой домашней засолки, острым перцем  и кинзой ( в сезон) ",
+                        "price": "120"
+                    },
+                    {
+                        "title": "Капреза",
+                        "description": "  помидоры, моцарелла и базиликум в бальзамическом уксусе и оливковом масле ",
+                        "price": "70"
+                    },
+                    {
+                        "title": "деревенский",
+                        "description": "вареный картофель, жаренные грибы с луком в соусе из майонеза и дижонской горчицы",
+                        "price": "80"
+                    }
+                ]
+            },
+            {
+                "id": "antipasti",
+                "title": "Антипасти",
+                "description": "",
+                "items": [
+                    {
+                        "title": "фаршированные рисом виноградные/капустные листья",
+                        "description": "",
+                        "price": "80"
+                    },
+                    {
+                        "title": "кабачки, фаршированные сыром фета с пряностями",
+                        "description": "",
+                        "price": "80"
+                    },
+                    {
+                        "title": "баклажанные рулеты с печеным перцем и сливочным сыром",
+                        "description": "",
+                        "price": "80"
+                    },
+                    {
+                        "title": "столбики огурцов, начиненные японской лапшой соба ",
+                        "description": "",
+                        "price": "80"
+                    },
+                    {
+                        "title": "печеные помидоры, фаршированные грибным  докселем",
+                        "description": "",
+                        "price": "80"
+                    },
+                    {
+                        "title": "зеленые маслины с пряностями и с зеленью (  цена на 100 гр) ",
+                        "description": "",
+                        "price": "18"
+                    },
+                    {
+                        "title": "маринованные шампиньоны ( цена на 100 гр) ",
+                        "description": "",
+                        "price": "15"
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "first",
+                "title": "Первые блюда/ холодные закуски",
+                "description": "",
+                "items": [
+                    {
+                        "title": "намазки  разных сортов",
+                        "description": "баклажанный крем/паста из маслин/ сушеных помидоров/ печеных перцев/ схуг из виноградных листьев - 10 шк/100 гр -греческая скорделия из тертого миндаля/  сливочный сыр с копченой красной рыбой  ( 100 гр) ",
+                        "price": "20"
+                    },
+                    {
+                        "title": "Мусс из тунца/салмона / баклажанов  ",
+                        "description": "форма инглиш кейк",
+                        "price": " 70/90/60"
+                    },
+                    {
+                        "title": "Паштет из куриной печени по-французски с тимьяном и бренди ( 500 гр)",
+                        "description": "",
+                        "price": "60"
+                    },
+                    {
+                        "title": "лосось/ красная форель горячей засолки , с пряностями, укропом в  масле ",
+                        "description": "500 гр",
+                        "price": "90"
+                    },
+                    {
+                        "title": "холодец куриный/говяжий ",
+                        "description": "",
+                        "price": "50/70"
+                    },
+                    {
+                        "title": "Карпаччо синта с рукколой и пармезаном ",
+                        "description": "( блюдо диаметром 30 см) ",
+                        "price": "120"
+                    },
+                    {
+                        "title": "Карпаччо из красной и белой рыбы  с семенами помидора и кинзы, красным луком, лимоном и оливковым маслом ",
+                        "description": "( блюдо диаметром  30 см)",
+                        "price": "120"
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "soups",
+                "title": "Супы",
+                "description": "(2 литра)",
+                "items": [
+                    {
+                        "title": "куриный бульон по-еврейски с корнеплодами и кнейдлах",
+                        "description": "",
+                        "price": "120"
+                    },
+                    {
+                        "title": "суп-гуляш по-венгерски  с говядиной и паприкой ",
+                        "description": "",
+                        "price": "130"
+                    },
+                    {
+                        "title": "оранжевый  суп из красной чечевицы и тыквы/батата ",
+                        "description": "",
+                        "price": "70"
+                    },
+                    {
+                        "title": "красный борщ с говядиной / постный борщ",
+                        "description": "",
+                        "price": "120/90"
+                    },
+                    {
+                        "title": "зеленый  щавельный борщ с говядиной/постный ",
+                        "description": "",
+                        "price": "120/90"
+                    },
+                    {
+                        "title": "тайландский суп  том-ям с рыбой ",
+                        "description": "",
+                        "price": "120"
+                    },
+                    {
+                        "title": "китайский суп вон тон ",
+                        "description": "( пельмени с начинкой из мяса/грибов) ",
+                        "price": "120"
+                    },
+                    {
+                        "title": "минестроне",
+                        "description": "",
+                        "price": "120"
+                    },
+                    {
+                        "title": "грибной суп",
+                        "description": "пюре из шампиньонов со сливками -",
+                        "price": "90"
+                    },
+                    {
+                        "title": "крем-суп вишуаз с картофелем и луком- порей",
+                        "description": "",
+                        "price": "90"
+                    }
+                ]
+            },
+            {
+                "id": "bakery",
+                "title": "Выпечка",
+                "description": "",
+                "items": [
+                    {
+                        "title": "кубана",
+                        "description": "тайманский хлеб",
+                        "price": "40"
+                    },
+                    {
+                        "title": "крекеры",
+                        "description": "с семечками, семенами чиа и льна ( без глютена) 250гр",
+                        "price": "40"
+                    },
+                    {
+                        "title": "булочки",
+                        "description": "из тахины, без муки - 1 шт ",
+                        "price": "5"
+                    },
+                    {
+                        "title": "пирожки",
+                        "description": "с различной начинкой ( капуста, картоша, грибы, мясо ) - 1 шт",
+                        "price": "6-8"
+                    },
+                    {
+                        "title": "самбусак с хумусом - 1 шт",
+                        "description": "",
+                        "price": "5"
+                    },
+                    {
+                        "title": "самса",
+                        "description": " с картошкой, луком и курдюком  - 1 шт",
+                        "price": "8"
+                    },
+                    {
+                        "title": "бао",
+                        "description": "азиатские  булочки на пару, с говядиной - 1 шт",
+                        "price": "10"
+                    },
+                    {
+                        "title": "рогалех",
+                        "description": "с соленым творогом и зеленью ( 500 гр) ",
+                        "price": "30"
+                    },
+                    {
+                        "title": "паштида",
+                        "description": "из песочного теста с бататом, луком-  порей и козьим сыром фромез  ( диаметр 22 см) ",
+                        "price": "120"
+                    },
+                    {
+                        "title": "паштида",
+                        "description": "со шпинатом и брынзой ( 20×30 см) ",
+                        "price": "120"
+                    },
+                    {
+                        "title": "блины",
+                        "description": "с различными начинками ( на муке/ на миндальной муке) - 1 шт",
+                        "price": "6"
+                    },
+                    {
+                        "title": "эгроли",
+                        "description": "из рисовой муки с начинкой из овощей - 1 шт",
+                        "price": "6"
+                    }
+                ]
+            },
+            {
+                "id": "fish",
+                "title": "Рыба",
+                "description": "",
+                "items": [
+                    {
+                        "title": "красная форель домашнего копчения ",
+                        "description": "( целая рыбина весом около 1.2 кг)",
+                        "price": "180"
+                    },
+                    {
+                        "title": "филе  морского  окуня барамунди ",
+                        "description": "в сливках с гарниром из риса с куркумой  ( 4 филе, 1 кг риса)",
+                        "price": "140"
+                    },
+                    {
+                        "title": "шашлычки/филе лосося",
+                        "description": "в соусах териаки/ лимон, чеснок, оливковое масло/ репчатый лук и сливочное масло ( 500 гр)",
+                        "price": "120"
+                    },
+                    {
+                        "title": "храйме",
+                        "description": "( 1 кг) ",
+                        "price": "90"
+                    },
+                    {
+                        "title": "гефилте фиш ",
+                        "description": "( 1 кг)",
+                        "price": "120"
+                    },
+                    {
+                        "title": "кебаб из кефали",
+                        "description": "на коричных палочках с йогуртовым соусом ( 500 кг)",
+                        "price": "80"
+                    },
+                    {
+                        "title": "паста с лососем",
+                        "description": "в сливочном соусе ( 500 кг)",
+                        "price": "70"
+                    }
+                ]
+            },
+            {
+                "id": "meat",
+                "title": "Мясо",
+                "description": "",
+                "items": [
+                    {
+                        "title": "говядина",
+                        "description": "в грибном соусе/ в винном соусе  (1 кг)",
+                        "price": "140"
+                    },
+                    {
+                        "title": "говяжий язык",
+                        "description": "с винном соусе/ соусе с грибами ( 1 кг) ",
+                        "price": "140"
+                    },
+                    {
+                        "title": "копченая  в триггере курица ",
+                        "description": "( 1 кг)",
+                        "price": "80"
+                    },
+                    {
+                        "title": "узбекский плов",
+                        "description": "( 2 кг)",
+                        "price": "120"
+                    },
+                    {
+                        "title": "ростбиф  шайтел в сувиде",
+                        "description": "( 1 кг)",
+                        "price": "150"
+                    },
+                    {
+                        "title": "баранья лопатка",
+                        "description": "запеченная в духовке баранья лопатка  с провансальскими травами и чесноком( 160 шк за кг, в зависимости от веса )",
+                        "price": "160/kg"
+                    },
+                    {
+                        "title": "котлеты",
+                        "description": "из куриного рубленного мяса - 1  кг",
+                        "price": "90"
+                    },
+                    {
+                        "title": "гусиная грудка ",
+                        "description": "в сувиде в апельсиновом соусе (1 грудка)",
+                        "price": "90"
+                    },
+                    {
+                        "title": "асадо  в духовке ",
+                        "description": "( 1 кг)",
+                        "price": "130"
+                    },
+                    {
+                        "title": "венгерский гуляш",
+                        "description": "с пастой  нокадили ( 2 кг)",
+                        "price": "120"
+                    },
+                    {
+                        "title": "долма",
+                        "description": "с мясом и рисом (2 кг)",
+                        "price": "150"
+                    },
+                    {
+                        "title": "мафрум",
+                        "description": "из  картофеля/баклажана ( 2 кг) ",
+                        "price": "120"
+                    },
+                    {
+                        "title": "спагетти болонез ",
+                        "description": "( 2 кг)",
+                        "price": "120"
+                    }
+                ]
+            },
+            {
+                "id": "garnirs",
+                "title": "Гарниры",
+                "description": "",
+                "items": [
+                    {
+                        "title": "стручковая фасоль ",
+                        "description": "с чесноком и миндалем (500 гр) ",
+                        "price": "30"
+                    },
+                    {
+                        "title": "мажадра",
+                        "description": "из риса с зеленой чечевицей  ( 500 гр) ",
+                        "price": "30"
+                    },
+                    {
+                        "title": "слоеная запеканка",
+                        "description": "из тонких пластов картофеля и батата в сливках ( 30×20  см)",
+                        "price": "90"
+                    },
+                    {
+                        "title": "тушеная капуста",
+                        "description": "по- русски ( 500 гр)",
+                        "price": "30"
+                    },
+                    {
+                        "title": "красная тушеная капуста",
+                        "description": "по-венгерски (500гр) ",
+                        "price": "30"
+                    },
+                    {
+                        "title": "стейк из белокачанной капусты",
+                        "description": " с соусом чили ( 500гр) ",
+                        "price": "30"
+                    },
+                    {
+                        "title": "ньюкки",
+                        "description": "ручной работы  в сливочном  соусе /  в соусе розе/ в грибном соусе ( 1 кг)",
+                        "price": "80"
+                    },
+                    {
+                        "title": "равиоли",
+                        "description": "ручной работы со шпинатом и рикоттой ( 1 кг)",
+                        "price": "80"
+                    },
+                    {
+                        "title": "свежие артишоки ",
+                        "description": "по-римски  ( 1 кг) ( в сезон)",
+                        "price": "90"
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            },
+            {
+                "id": "desserts",
+                "title": "Десерты",
+                "description": "",
+                "items": [
+                    {
+                        "title": "тирамису",
+                        "description": "(30×20) ",
+                        "price": "250"
+                    },
+                    {
+                        "title": "мильфей Зимняя сказка",
+                        "description": "с кремом маскарпоне и яблоком в меду  (20*30см)",
+                        "price": "220"
+                    },
+                    {
+                        "title": "мусс триколад ",
+                        "description": "  три вида шоколада ( диаметр 24 см)",
+                        "price": "280"
+                    },
+                    {
+                        "title": "торт трио",
+                        "description": "шоколадный мусс с крем-брюле и желе из ягод (24см в диаметре) ",
+                        "price": "300"
+                    },
+                    {
+                        "title": "эклеры",
+                        "description": "с  заварным ванильным кремом/с шоколадным кремом  ( 12 штук, 1 кг)",
+                        "price": "90"
+                    },
+                    {
+                        "title": "слоеные трубочки",
+                        "description": "с кремом дипломат  в ореховой крошке ( 12 штук) ",
+                        "price": "100"
+                    },
+                    {
+                        "title": "шоколадный пай ",
+                        "description": " ( 24 см)",
+                        "price": "150"
+                    },
+                    {
+                        "title": "ореховый пай ",
+                        "description": " ( 24 см)",
+                        "price": "150"
+                    },
+                    {
+                        "title": " киевский торт",
+                        "description": "маренг с кремом шарлотт и орехами ( 24 см)",
+                        "price": "200"
+                    },
+                    {
+                        "title": "творожный пирог",
+                        "description": "с песочными коржами и вишней ( 20*30см)",
+                        "price": "180"
+                    },
+                    {
+                        "title": "шоколадный торт ",
+                        "description": "без глютена, лактозы и сахара миндальные коржи, кокосовый крем, горький шоколад 75% какао и шоколадная стружка ( 20*30см)",
+                        "price": "320"
+                    },
+                    {
+                        "title": "медовый торт ",
+                        "description": "(  диаметр 24 см) ",
+                        "price": "220"
+                    },
+                    {
+                        "title": "наполеон ",
+                        "description": "  ( 30×20см) ",
+                        "price": "220"
+                    },
+                    {
+                        "title": "печенье альфахорес ",
+                        "description": "  ( 500 гр)",
+                        "price": "40"
+                    },
+                    {
+                        "title": "ореховое печенье ",
+                        "description": "( 500 гр) ",
+                        "price": "40"
+                    },
+                    {
+                        "title": "печенье витраж ",
+                        "description": " 1 шт ",
+                        "price": "5"
+                    },
+                    {
+                        "title": "",
+                        "description": "",
+                        "price": ""
+                    }
+                ]
+            }
+        ]
     },
     "CONTACT": {
         "title": "Contact Me",
-        "text": "Please leave your details and i'll contact you soon",
+        "formTitle": "Please leave your details and i'll contact you soon",
         "name": "Name",
         "mail": "Mail",
         "phone": "Telephone",
-        "description": "Description"
+        "description": "Description",
+        "meTitle": "You can find me on:",
+        "newsletterTitle1": "Join Us",
+        "newsletterTitle2": "Enjoy discounts"
     },
     "GALLERY": {
-        "title": "Gallery"
+        "title": "Gallery",
+        "main": "Main",
+        "snacks": "Snacks",
+        "desserts": "Conditory"
     }
 }
