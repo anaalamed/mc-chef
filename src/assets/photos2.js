@@ -79,7 +79,7 @@ export const main = [
     }   
 ]
 
-export const desserts = [
+export const conditory = [
     {
         src: 'https://firebasestorage.googleapis.com/v0/b/mc-taameyolam.appspot.com/o/desserts%2Fb97e4c9e-4342-41a8-ae21-0a5ed44bd82b.jpeg?alt=media&token=4e26a9e9-c511-462a-9309-5ab2a035e1f1',
         width: 1,

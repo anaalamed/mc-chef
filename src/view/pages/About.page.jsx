@@ -42,6 +42,8 @@ const Box = styled.div`
 const ImgWrapper = styled.div`
   overflow: hidden;
   border-radius: 3rem;
+  height: 70vh;
+  width: auto;
 
 `;
 
@@ -49,7 +51,8 @@ const Img = styled.img`
   border-radius: 0.6rem;
   transform: scale(1);
   transition: 1s;
-  max-height: 70vh;
+  width: 100%;
+  height: 100%;
 
   :hover {
     transform: scale(1.1);
@@ -61,5 +64,9 @@ const Description = styled.p`
   text-align: center;
   font-size: 1.6rem;
   padding: 1rem 2rem;
-  max-width: 50rem;
+  max-width: 45%;
+
+  @media ${devices.mobile} {
+    max-width: 90%;
+  }
 `;

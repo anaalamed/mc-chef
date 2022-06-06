@@ -29,7 +29,7 @@ const TopBar = () => {
           <Menu>
             <SLink to="/about">{topbar.about}</SLink>
             <SLink to="/menu">{topbar.menu}</SLink>
-            <SLink to="/gallery">{topbar.gallery}</SLink>
+            <SLink to="/gallery/main">{topbar.gallery}</SLink>
             <SLink to="/contact">{topbar.contact}</SLink>
           </Menu>
 

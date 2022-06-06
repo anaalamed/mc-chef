@@ -34,9 +34,9 @@ const Categories = () => {
         </Bullet>
 
         <Bullet className="catDesserts">
-          <Link to="/gallery/desserts">
+          <Link to="/gallery/conditory">
             <ImgWrapper><Img className='imgHover' src="https://firebasestorage.googleapis.com/v0/b/mc-taameyolam.appspot.com/o/desserts%2FWhatsApp%20Image%202022-02-04%20at%2018.40.44%20(1).jpeg?alt=media&token=53bce8f0-48ad-4830-9780-047d57bfe121"></Img></ImgWrapper>
-            <Text>{categories.desserts}</Text>
+            <Text>{categories.conditory}</Text>
           </Link>
         </Bullet>
 

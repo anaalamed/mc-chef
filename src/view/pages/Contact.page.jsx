@@ -21,10 +21,6 @@ const About = () => {
       <Title>{contact.title}</Title>
 
       <Box>
-        {/* <ImgWrapper>
-          <Img src="assets/images/aa.jpeg"></Img>
-        </ImgWrapper> */}
-
         <DetailsBox>
           <TitleText>{contact.meTitle}</TitleText>
           <Icons>

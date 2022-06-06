@@ -117,7 +117,7 @@ const About = () => {
                     )}
                 />
 
-                <Button title="Submit" onClick={handleSubmit(onSubmit)} >Send</Button>
+                <Button title="Submit" onClick={handleSubmit(onSubmit)} >{contact.send}</Button>
             </Form>
         </Box>
     );

@@ -35,7 +35,7 @@ const Menu = () => {
               <Item key={index}>
                 <div>
                   <ItemTitle>{item.title} </ItemTitle>
-                  {item.description ? (<ItemDescription> - {item.description}</ItemDescription>) : null}
+                  {item.description ? (<ItemDescription> {item.description}</ItemDescription>) : null}
                 </div>
                 <ItemPrice>{item.price}</ItemPrice>
               </Item>
@@ -87,6 +87,7 @@ const Category = styled.p`
 `;
 
 const MenuBox = styled.div`
+  padding-bottom: 5rem;
 
   ::after {
     /* content: "";
@@ -118,13 +119,20 @@ const ItemTitle = styled.span`
 const ItemDescription = styled.span`
   text-align: center;
   font-size: 1.5rem;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 `;
 
 const ItemPrice = styled.span`
   font-size: 2rem;
   color: ${COLORS.main};
   font-weight: bold;
+  margin-left: 10px;
+  margin-right: 0;
+
+  ${rtl`
+    margin-right: 10px;   
+    margin-left: 0;
+  `}
 `;
 
 const Item = styled.div`

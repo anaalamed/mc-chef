@@ -1,9 +1,9 @@
 {
     "TOPBAR": {
-        "about": "About",
-        "menu": "Menu",
-        "gallery": "Gallery",
-        "contact": "Contact"
+        "about": "Обо мне",
+        "menu": "Меню",
+        "gallery": "Галерея",
+        "contact": "Контакты"
     },
     "HOMEPAGE": {
         "about": "About Me",
@@ -579,20 +579,21 @@
         ]
     },
     "CONTACT": {
-        "title": "Contact Me",
-        "formTitle": "Please leave your details and i'll contact you soon",
-        "name": "Name",
-        "mail": "Mail",
-        "phone": "Telephone",
-        "description": "Description",
-        "meTitle": "You can find me on:",
-        "newsletterTitle1": "Join Us",
-        "newsletterTitle2": "Enjoy discounts"
+        "title": "Как меня найти",
+        "formTitle": "Оставьте свои данные и я с вами свяжусь",
+        "name": "Имя",
+        "mail": "Меил",
+        "phone": "Телефон",
+        "description": "Ваше сообщение",
+        "meTitle": "А также меня можно найти:",
+        "newsletterTitle1": "Связаться со мной",
+        "newsletterTitle2": "Оставьте свои данные и я с вами свяжусь ",
+        "send": "Отправить"
     },
     "GALLERY": {
         "title": "Gallery",
         "main": "Main",
         "snacks": "Snacks",
-        "desserts": "Conditory"
+        "conditory": "Conditory"
     }
 }

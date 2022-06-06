@@ -98,7 +98,7 @@ const Newsletter = () => {
         />
         {errors.telephone && <StyledText>This is not valid.</StyledText>}
 
-        <Button title="Submit" onClick={handleSubmit(onSubmit)} >Send</Button>
+        <Button title="Submit" onClick={handleSubmit(onSubmit)} >{contact.send}</Button>
       </Form>
 
 

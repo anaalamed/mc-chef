@@ -9,6 +9,8 @@ import About from "./pages/About.page";
 import Menu from "./pages/Menu.page";
 import Contact from "./pages/Contact.page";
 import Gallery from "./pages/Gallery.page";
+import Whatsapp from "./Whatsapp.view";
+
 
 
 import LangSelector from "./LangSelector";
@@ -27,6 +29,7 @@ const App = () => {
       {/* <LangSelector></LangSelector> */}
       <Box>
         <TopBar />
+        <Whatsapp></Whatsapp>
 
         <Route path="/" exact component={Home} />
         {/* <Route path="/quotes" exact component={Joker} />/ */}

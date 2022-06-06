@@ -20,8 +20,8 @@ const LangSelector = () => {
 
             <div className="custom-select" onChange={changeLanguage}>
                 <Select className="a" >
-                    <option value="ru">RU</option>
                     <option value="he">HE</option>
+                    <option value="ru">RU</option>
                 </Select>
             </div>
         </Box>
