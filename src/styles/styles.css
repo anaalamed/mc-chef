@@ -41,6 +41,13 @@
     top: -390px;
 }
 
+@media screen and (max-width: 812px) {
+    #root .catDesserts img {
+        position: relative;
+        top: -100px;
+    }
+}
+
 
 
 /* homepage slider  */

@@ -1,46 +1,80 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Main, Container, Title } from '../../styles/reset.css';
 import { devices } from '../../styles/responsive';
 import { useTranslation } from 'react-i18next';
+import i18n from "i18next";
 import { COLORS } from '../../styles/colors';
 import rtl from "styled-components-rtl";
 
 
 const Menu = () => {
   const { t } = useTranslation();
-  const menu = t("MENU", { returnObjects: true });
 
-  const [activeIndex, setactiveIndex] = useState(0);
+  console.log(i18n.language);
+  const menuUrlHe = "https://api.airtable.com/v0/appj7djjCiW3MPlDD/menuHe?api_key=keyJ4NAnNssOD6noi";
+  const menuUrlRu = "https://api.airtable.com/v0/appj7djjCiW3MPlDD/menuRu?api_key=keyJ4NAnNssOD6noi";
+  const menuUrl = i18n.language === "he" ? menuUrlHe : menuUrlRu;
+
+  const [activeIndex, setactiveIndex] = useState(null);
+  const [menu, setMenu] = useState([]);
+  const [categories, setCategories] = useState([]);
+
   const [currentCategoryName, setcurrentCategoryName] = useState("salats");
 
-  const curCategory = menu.categories.find(obj => obj.id === currentCategoryName);
+  useEffect(() => {
+    // console.log("fetch");
+
+    fetch(menuUrl)
+      .then((res) => res.json())
+      .then((data) => {
+
+        let catArr = [];
+        data.records.map(item => {
+          if (!catArr?.find(cat => cat.cat_id == item.fields.categories__id)) {
+            catArr.push({ cat_id: item.fields.categories__id, cat_name: item.fields.categories__title, cat_desc: item.fields.categories__description || "" });
+          }
+        })
+        // console.log(catArr);
+        setCategories(catArr);
+        setMenu(data.records);
+
+      })
+      .catch((error) => {
+        console.log("fetch error => ", error);
+      });
+
+  }, [i18n.language]);
+
   return (
     <Main>
       <Container style={{ position: "relative" }} >
 
-        <Title>{menu.title}</Title>
         <Categories>
-          {menu.categories.length !== 0 ? (menu.categories.map((cat, index) => (
-            <Category onClick={() => { setcurrentCategoryName(cat.id); setactiveIndex(index) }} key={index}
+          {categories.length !== 0 ? (categories.map((cat, index) => (
+            <Category onClick={() => { setcurrentCategoryName(cat.cat_id); setactiveIndex(index) }} key={index}
               className={`${index == activeIndex ? "active" : ""}`}
-            >{cat.title}</Category>))) : null}
+            >{cat.cat_name}</Category>))) : null}
         </Categories>
 
-        {curCategory.description ? (<div>{curCategory.description}</div>) : null}
+        {/* {categories.length !== 0 ? (
+          categories.filter(cat => cat.cat_id == currentCategoryName).cat_desc ? (<div>{categories.cat_desc}</div>) : null
+        ) : null} */}
 
-        <MenuBox>
-          {curCategory.items.length !== 0 ? (
-            curCategory.items.map((item, index) => (
-              <Item key={index}>
-                <div>
-                  <ItemTitle>{item.title} </ItemTitle>
-                  {item.description ? (<ItemDescription> {item.description}</ItemDescription>) : null}
-                </div>
-                <ItemPrice>{item.price}</ItemPrice>
-              </Item>
-            ))
-          ) : (null)}
+        < MenuBox >
+          {
+            menu.length !== 0 ? (
+              menu.filter(item => item.fields.categories__id == currentCategoryName).map((item, index) => (
+                <Item key={index}>
+                  <div>
+                    <ItemTitle>{item.fields.item_title}</ItemTitle>
+                    {item.fields.item_description ? (<ItemDescription> {item.fields.item_description}</ItemDescription>) : null}
+                  </div>
+                  <ItemPrice>{item.fields.item_price}</ItemPrice>
+                </Item>
+              ))
+            ) : null
+          }
         </MenuBox>
 
       </Container>

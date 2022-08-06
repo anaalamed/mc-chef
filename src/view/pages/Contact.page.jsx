@@ -61,7 +61,7 @@ const DetailsBox = styled.div`
   /* padding: 0 20rem 0 ; */
   width: 50%;
   color: ${COLORS.main};
-  /* background: red; */
+  background: ${COLORS.hover};
   border: 3px solid ${COLORS.main};
   border-radius:  50px 10px 50px 10px;
   height: 400px;
@@ -105,8 +105,8 @@ const Icons = styled.div`
 const Icon = styled(FontAwesomeIcon)`
   font-size: 40px;
   padding:  0 1rem;
-  color: ${COLORS.hover};
-  /* color: ${COLORS.orange}; */
+  color: ${COLORS.bg};
+  /* color: #fff; */
 :hover {
   color: ${COLORS.grey}
 }

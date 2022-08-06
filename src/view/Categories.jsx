@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { Title } from '../styles/reset.css';
 import { Link } from "react-router-dom";
+import { devices } from '../styles/responsive';
+
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -75,6 +77,12 @@ const Text = styled.p`
  right: 0;
  background: rgba(155,155, 155,0.8);
  bottom: 0;
+
+ @media ${devices.mobile} {
+  font-size: 2.5rem;
+  height: 30px;
+  line-height: 30px;
+  }
  `;
 
 
@@ -85,6 +93,10 @@ const ImgWrapper = styled.div`
   width: 100%;
   height: auto;
   /* border-radius: 1rem 3rem 0 0; */
+
+  @media ${devices.mobile} {
+    max-height: 200px;
+  }
   `;
 
 const Img = styled.img`

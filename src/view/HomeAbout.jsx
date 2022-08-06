@@ -1,4 +1,5 @@
 import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { Title } from '../styles/reset.css';
@@ -7,40 +8,45 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { COLORS } from "../styles/colors";
 import '../styles/styles.css'
 
+import axios from 'axios';
+
 const HomeAbout = () => {
   const { t } = useTranslation();
   const home = t("HOMEPAGE", { returnObjects: true });
 
-  return (
-    <Box>
-      <TitleHome>{home.about}</TitleHome>
-      <Bullets>
-
-        <Bullet>
-          {/* <Icon icon={faCookie} /> */}
-          <ImgWrapper><Img className='imgHover' src="assets/images/makaroni.jpeg"></Img></ImgWrapper>
-          <Text>{home.conditory}</Text>
-        </Bullet>
-
-        <Bullet>
-          {/* <Icon icon={faCookie} /> */}
-          <ImgWrapper><Img className='imgHover' src="assets/images/taamim2.jpeg"></Img></ImgWrapper>
-          <Text>{home.taamim}</Text>
-        </Bullet>
-
-        <Bullet>
-          {/* <Icon icon={faCookie} /> */}
-          <ImgWrapper><Img className='imgHover' src="assets/images/gurme4.jpeg"></Img></ImgWrapper>
-          <Text>{home.gurme}</Text>
-        </Bullet>
+}
 
 
-      </Bullets>
+return (
+  <Box>
+    <TitleHome>{home.about}</TitleHome>
+    <Bullets>
+
+      <Bullet>
+        {/* <Icon icon={faCookie} /> */}
+        <ImgWrapper><Img className='imgHover' src="assets/images/makaroni.jpeg"></Img></ImgWrapper>
+        <Text>{home.conditory}</Text>
+      </Bullet>
+
+      <Bullet>
+        {/* <Icon icon={faCookie} /> */}
+        <ImgWrapper><Img className='imgHover' src="assets/images/taamim2.jpeg"></Img></ImgWrapper>
+        <Text>{home.taamim}</Text>
+      </Bullet>
+
+      <Bullet>
+        {/* <Icon icon={faCookie} /> */}
+        <ImgWrapper><Img className='imgHover' src="assets/images/gurme4.jpeg"></Img></ImgWrapper>
+        <Text>{home.gurme}</Text>
+      </Bullet>
 
 
-    </Box>
-  );
-};
+    </Bullets>
+
+
+  </Box>
+);
+// };
 export default HomeAbout;
 
 const Box = styled.div`

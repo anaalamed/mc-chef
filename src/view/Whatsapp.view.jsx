@@ -65,6 +65,6 @@ const Icon = styled(FontAwesomeIcon)`
 
 
   ${rtl`
-    right: 20px;
+    right: 10px;
   `}
 `;
